@@ -1,0 +1,249 @@
+@font-face {
+    font-family: gilroy;
+    src: url('Gilroy-Regular.ttf');
+}
+
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: gilroy;
+    text-align: center;
+    margin: 0;
+    /* Remove default body margin */
+    height: 100vh;
+    /* Ensure the body takes up the full viewport height */
+    overflow: hidden;
+    /* Prevent scrolling */
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    height: 100vh;
+    /* Set to full height */
+}
+
+.cover {
+    position: absolute;
+    top: 3%;
+}
+
+.cover h2 a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    /* Fill the height of the main container */
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    justify-content: space-between;
+}
+
+h1 {
+    cursor: pointer;
+    font-size: 4vw;
+    letter-spacing: -.1vw;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: rgb(121, 35, 35);
+    /* Highlight on hover */
+}
+
+#play {
+    color: rgb(0, 0, 0);
+    /* Highlight play button */
+}
+
+/* Custom styling for the audio (if desired, transparent background) */
+audio {
+    display: none;
+    color: rgb(rgb(189, 57, 57), green, blue);
+    /* Hide the audio control */
+}
+
+/* New code for song details */
+.song-details {
+    margin: 0;
+    /* Remove margins */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    /* Fixed height for consistent layout */
+}
+
+#song-image {
+    width: 200px;
+    height: 250px;
+    /* Fixed height for the image */
+    border-radius: 10px;
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    /* Space between image and text */
+}
+
+#song-name {
+    font-size: 2vw;
+    margin: 10px 0;
+    height: 30px;
+    /* Fixed height for song name */
+}
+
+#song-description {
+    font-size: 1.2vw;
+    color: rgb(54, 54, 54);
+    height: 50px;
+    margin-top: -.1vw;
+    /* Fixed height for song description */
+    overflow: hidden;
+    /* Hide overflow text */
+    text-overflow: ellipsis;
+    font-weight: 500;
+    /* Indicate more text if it overflows */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    body {
+        outline: none;
+        user-select: none;
+        background-color: black;
+        color: white;
+    }
+
+    ;
+
+    .cover {
+        position: absolute;
+        top: 2%;
+        margin-left: -3vw;
+    }
+
+    .cover h2 a {
+        margin-left: -55vw;
+        color: white;
+        font-size: 5vw;
+        /* Adjust font size for mobile */
+    }
+
+    .main {
+
+        margin-top: 35vw;
+        padding: 0;
+        /* Remove padding for mobile */
+        flex-direction: column;
+        /* Stack elements vertically */
+        justify-content: flex-start;
+        /* Align items at the top */
+        align-items: center;
+        /* Center horizontally */
+        height: auto;
+        /* Adjust height for mobile */
+    }
+
+    .container {
+        color: white;
+        margin-top: 15vw;
+        width: 90%;
+        /* Wider container on mobile * /* Stack buttons vertically */
+        align-items: center;
+        /* Center buttons */
+
+    }
+
+    h1 {
+        font-size: 8vw;
+        /* Adjust font size for buttons on mobile */
+        color: white;
+    }
+
+    .song-details {
+        margin-top: 9vw;
+        width: 90%;
+        /* Adjust width for small screens */
+        height: auto;
+        /* Allow flexibility in height */
+    }
+
+    #song-image {
+        width: 80%;
+        /* Responsive image width */
+        max-width: 200px;
+        /* Maintain max width */
+    }
+
+    #song-name {
+        margin-top: -1vw;
+        font-size: 6vw;
+        /* Adjust for mobile */
+    }
+
+    #song-description {
+        margin-top: -2vw;
+        color: black;
+        font-size: 5vw;
+        /* Adjust for mobile */
+    }
+
+    h1 {
+        user-select: none;
+        cursor: pointer;
+        color: white;
+    
+    }
+
+    h1:focus {
+        outline: none;
+    }
+
+    h1:hover {
+        color: rgb(255, 255, 255);
+        /* Highlight on hover */
+        user-select: none;
+    }
+
+    h1:active {
+        user-select: none;
+        color: rgb(255, 255, 255);
+        transition: color o.5s ease;
+    }
+
+    #play {
+        color: rgb(255, 255, 255);
+        margin-left: 1vw;
+        /* Highlight play button */
+
+
+    }
+
+    /* Prevent the back and forward buttons from changing color when clicked */
+    h1:active {
+        color: inherit;
+        /* Maintain current color when active */
+    }
+
+   
+
+
+    #song-description {
+        font-size: 4vw;
+        color: rgb(255, 255, 255);
+
+    }
+}
